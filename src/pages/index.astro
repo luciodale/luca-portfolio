@@ -1,0 +1,74 @@
+---
+import ImageChiSono from "../components/ImageChiSono.astro";
+import ImageInfo from "../components/ImageInfo.astro";
+import ImageTrattamenti from "../components/ImageTrattamenti.astro";
+import { Link } from "../components/Link";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Luca Del Sole">
+  <div
+    class="h-[50vh] bg-[url('/images/luca.jpg')] bg-no-repeat py-20 bg-contain bg-bottom"
+  >
+  </div>
+  <div class="py-10 bg-primary text-white">
+    <div class="max-w-3xl mx-auto font-light text-lg">
+      Benvenuti nel mio studio di osteopatia, dove la vostra salute e il vostro
+      benessere sono la mia priorità. Con anni di esperienza e una formazione
+      approfondita nel campo dell'osteopatia, mi impegno a fornire trattamenti
+      personalizzati per aiutarvi a raggiungere il vostro massimo potenziale di
+      salute.
+    </div>
+  </div>
+
+  <div class="py-10 bg-secondary flex gap-10 items-center">
+    <div class="w-1/2 flex justify-end flex-shrink-0">
+      <ImageChiSono className="max-w-md fill-primary" />
+    </div>
+    <div class="flex flex-col gap-10">
+      <div class="max-w-2xl mx-auto font-light text-lg text-dark">
+        Sono <span class="font-medium">Luca Del Sole </span>, un'osteopata
+        dedicato al benessere dei miei pazienti. Laureato presso <a
+          class="underline"
+          href="https://www.aiotpescara.it/">l’A.I.O.T</a
+        > e con 6 anni di esperienza pratica, ho sviluppato un approccio olistico
+        alla cura che integra tecniche manuali e una profonda comprensione del corpo
+        umano.
+      </div>
+      <Link label="approfondisci" href="/chi-sono" />
+    </div>
+  </div>
+
+  <div class="pb-10 bg-primary flex flex-col gap-10">
+    <div class="flex w-full -mt-1 justify-center flex-shrink-0">
+      <ImageTrattamenti className="w-full max-w-screen-lg fill-secondary" />
+    </div>
+    <div class="">
+      <div class="flex flex-col gap-10 max-w-screen-lg mx-auto">
+        <!-- 36rem is max-w-xl -->
+        <div class="w-[36rem] font-light text-lg text-white">
+          Offro una vasta gamma di trattamenti osteopatici, personalizzati per
+          soddisfare le esigenze individuali di ciascun paziente. Utilizzo un
+          approccio completo che considera non solo i sintomi evidenti, ma anche
+          le cause sottostanti del disagio, lavorando per ripristinare
+          l'equilibrio e la funzione ottimale del corpo.
+        </div>
+        <Link label="approfondisci" href="/chi-sono" mode="dark" />
+      </div>
+    </div>
+  </div>
+
+  <div class="py-10 bg-secondary flex gap-10 items-center">
+    <div class="w-1/2 flex justify-end flex-shrink-0">
+      <ImageInfo className="max-w-md fill-primary" />
+    </div>
+    <div class="flex flex-col gap-10">
+      <div class="max-w-xl mx-auto font-light text-lg text-dark">
+        Se desiderate prenotare una visita o avere maggiori informazioni sui
+        miei servizi, non esitate a contattarmi. Sono qui per aiutarvi a
+        raggiungere il vostro obiettivo di salute e benessere.
+      </div>
+      <Link label="contattami" href="/contattami" />
+    </div>
+  </div>
+</Layout>

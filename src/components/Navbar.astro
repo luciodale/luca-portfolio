@@ -1,0 +1,6 @@
+---
+import NavbarTSX from "./Navbar";
+const currentHref = Astro.url.pathname;
+---
+
+<NavbarTSX client:visible {currentHref} />
