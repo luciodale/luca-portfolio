@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
     class="h-[50vh] bg-[url('/images/luca.jpg')] bg-no-repeat py-20 bg-contain bg-bottom"
   >
   </div>
-  <div class="py-10 bg-primary text-white">
+  <div class="py-10 px-4 bg-primary text-white">
     <div class="max-w-3xl mx-auto font-light text-lg">
       Benvenuti nel mio studio di osteopatia, dove la vostra salute e il vostro
       benessere sono la mia priorità. Con anni di esperienza e una formazione
@@ -21,12 +21,17 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <div class="py-10 bg-secondary flex gap-10 items-center">
-    <div class="w-1/2 flex justify-end flex-shrink-0">
-      <ImageChiSono className="max-w-md fill-primary" />
+  <div
+    class="py-10 px-4 bg-secondary flex gap-6 md:gap-10 md:items-center flex-col md:flex-row"
+  >
+    <div class="w-1/2 md:flex justify-end flex-shrink-0">
+      <ImageChiSono className="md:max-w-sm hidden md:block fill-primary" />
+      <div class="uppercase text-primary text-4xl md:hidden font-light">
+        chi sono
+      </div>
     </div>
-    <div class="flex flex-col gap-10">
-      <div class="max-w-2xl mx-auto font-light text-lg text-dark">
+    <div class="flex flex-col gap-6 md:gap-10">
+      <div class="md:max-w-2xl mx-auto font-light text-lg text-dark">
         Sono <span class="font-medium">Luca Del Sole </span>, un'osteopata
         dedicato al benessere dei miei pazienti. Laureato presso <a
           class="underline"
@@ -39,14 +44,18 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <div class="pb-10 bg-primary flex flex-col gap-10">
-    <div class="flex w-full -mt-1 justify-center flex-shrink-0">
-      <ImageTrattamenti className="w-full max-w-screen-lg fill-secondary" />
+  <div class="py-10 px-4 bg-primary flex flex-col gap-10">
+    <div class="flex w-full md:justify-center flex-shrink-0">
+      <ImageTrattamenti
+        className="w-full max-w-3xl hidden md:block fill-secondary"
+      />
+      <div class="uppercase text-white text-4xl font-light md:hidden">
+        trattamenti
+      </div>
     </div>
     <div class="">
-      <div class="flex flex-col gap-10 max-w-screen-lg mx-auto">
-        <!-- 36rem is max-w-xl -->
-        <div class="w-[36rem] font-light text-lg text-white">
+      <div class="flex flex-col gap-10 max-w-screen-md mx-auto">
+        <div class="md:max-w-2xl font-light text-lg text-white">
           Offro una vasta gamma di trattamenti osteopatici, personalizzati per
           soddisfare le esigenze individuali di ciascun paziente. Utilizzo un
           approccio completo che considera non solo i sintomi evidenti, ma anche
@@ -58,12 +67,17 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <div class="py-10 bg-secondary flex gap-10 items-center">
-    <div class="w-1/2 flex justify-end flex-shrink-0">
-      <ImageInfo className="max-w-md fill-primary" />
+  <div
+    class="py-10 px-4 bg-secondary flex gap-6 md:gap-10 md:items-center flex-col md:flex-row"
+  >
+    <div class="w-1/2 md:flex justify-end flex-shrink-0">
+      <ImageInfo className="md:max-w-sm hidden md:block fill-primary" />
+      <div class="uppercase text-primary text-4xl md:hidden font-light">
+        info
+      </div>
     </div>
-    <div class="flex flex-col gap-10">
-      <div class="max-w-xl mx-auto font-light text-lg text-dark">
+    <div class="flex flex-col gap-6 md:gap-10">
+      <div class="md:max-w-xl md:mx-auto font-light text-lg text-dark">
         Se desiderate prenotare una visita o avere maggiori informazioni sui
         miei servizi, non esitate a contattarmi. Sono qui per aiutarvi a
         raggiungere il vostro obiettivo di salute e benessere.
