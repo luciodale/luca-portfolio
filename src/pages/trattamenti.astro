@@ -2,9 +2,119 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Luca Del Sole">
-  <div
-    class="h-[50vh] bg-[url('/images/luca.jpg')] bg-no-repeat py-20 bg-contain bg-bottom"
-  >
-  </div>
+<Layout title="Trattamenti">
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] bg-gray-200">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white text-center">
+        Trattamenti Osteopatici
+      </h1>
+    </div>
+    <!-- Placeholder for the hero image -->
+    <div class="w-full h-full bg-gray-400 object-cover"></div>
+  </section>
+
+  <!-- Treatment Sections -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 lg:px-12">
+      <!-- Treatment 1 -->
+      <div class="flex flex-col lg:flex-row items-center mb-12">
+        <div
+          class="lg:w-1/2 h-64 bg-gray-300 rounded-lg shadow-lg object-cover"
+        >
+        </div>
+        <!-- Treatment Image Placeholder -->
+        <div class="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+            Trattamento 1
+          </h2>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+            Descrizione dettagliata del trattamento 1. Questa sezione spiega i
+            benefici, le tecniche utilizzate e come il trattamento può aiutare a
+            migliorare il benessere del paziente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Treatment 2 -->
+      <div class="flex flex-col lg:flex-row-reverse items-center mb-12">
+        <div
+          class="lg:w-1/2 h-64 bg-gray-300 rounded-lg shadow-lg object-cover"
+        >
+        </div>
+        <!-- Treatment Image Placeholder -->
+        <div class="lg:w-1/2 lg:pr-12 mt-6 lg:mt-0">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+            Trattamento 2
+          </h2>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+            Descrizione dettagliata del trattamento 2. In questa sezione, si
+            approfondiscono le modalità di applicazione, i risultati attesi e i
+            vantaggi per la salute.
+          </p>
+        </div>
+      </div>
+
+      <!-- Treatment 3 -->
+      <div class="flex flex-col lg:flex-row items-center mb-12">
+        <div
+          class="lg:w-1/2 h-64 bg-gray-300 rounded-lg shadow-lg object-cover"
+        >
+        </div>
+        <!-- Treatment Image Placeholder -->
+        <div class="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0">
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+            Trattamento 3
+          </h2>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+            Descrizione dettagliata del trattamento 3. Questa sezione include
+            informazioni su come il trattamento può alleviare i sintomi e
+            migliorare la qualità della vita.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Description Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center px-6 lg:px-12">
+      <div
+        class="relative w-full h-80 lg:h-96 bg-gray-400 object-cover rounded-lg shadow-lg"
+      >
+      </div>
+      <!-- Full-width Image Placeholder -->
+      <div class="mt-10">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+          Approfondimenti sui Trattamenti
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+          Ogni trattamento che offro è progettato per affrontare specifici
+          problemi di salute e migliorare il benessere generale. Utilizzo
+          tecniche avanzate e personalizzate per garantire risultati ottimali.
+          Se hai domande sui trattamenti o desideri discutere la tua situazione
+          specifica, non esitare a contattarmi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-gray-900 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+        Contattami per maggiori informazioni
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        Per scoprire come i miei trattamenti possono fare la differenza nella
+        tua vita, prenota una consulenza oggi stesso.
+      </p>
+      <a
+        href="/contattami"
+        class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transition-all"
+      >
+        Prenota una Consulenza
+      </a>
+    </div>
+  </section>
 </Layout>

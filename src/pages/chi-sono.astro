@@ -3,8 +3,114 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luca Del Sole">
-  <div
-    class="h-[50vh] bg-[url('/images/luca.jpg')] bg-no-repeat py-20 bg-contain bg-bottom"
-  >
-  </div>
+  <!-- Section 2: Split layout (Text + Image) -->
+  <section class="bg-gray-50 py-16">
+    <div
+      class="container mx-auto flex flex-col lg:flex-row gap-12 items-center justify-between px-6 lg:px-12"
+    >
+      <!-- Text Block -->
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+          Chi sono
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+          Sono <strong class="text-gray-900">Luca Del Sole</strong>, osteopata
+          laureato presso l’A.I.O.T con oltre sei anni di esperienza. Il mio
+          lavoro si concentra sulla comprensione e la cura del corpo umano
+          attraverso un approccio olistico che prende in considerazione le
+          connessioni tra i vari sistemi del corpo e il loro impatto sulla
+          salute generale.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+          Ogni paziente è unico, e il mio obiettivo è fornire trattamenti
+          personalizzati per ciascuno, utilizzando tecniche manuali delicate ed
+          efficaci. Il mio approccio mira a individuare e affrontare le cause
+          profonde del disagio fisico.
+        </p>
+      </div>
+
+      <!-- Image Block -->
+      <div class="lg:w-1/2 h-96">
+        <div
+          class="w-full h-full bg-gray-400 rounded-lg shadow-lg object-cover"
+        >
+        </div>
+        <!-- Image Placeholder -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Full-width Image with Description -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div
+        class="relative w-full h-80 lg:h-96 bg-gray-400 object-cover rounded-lg shadow-lg"
+      >
+      </div>
+      <!-- Full-width Image Placeholder -->
+      <div class="mt-10 text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+          Il Mio Approccio
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+          Il mio obiettivo è aiutare ogni paziente a raggiungere un equilibrio
+          naturale, migliorando la mobilità, riducendo il dolore e favorendo la
+          guarigione. Integro tecniche osteopatiche con una profonda
+          comprensione del corpo umano.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Reverse Split Layout (Image + Text) -->
+  <section class="bg-gray-50 py-16">
+    <div
+      class="container mx-auto flex flex-col lg:flex-row-reverse gap-12 items-center justify-between px-6 lg:px-12"
+    >
+      <!-- Text Block -->
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+          Esperienza e Formazione
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+          Durante la mia carriera, ho avuto il privilegio di lavorare con una
+          varietà di pazienti, ognuno con esigenze diverse. Questo mi ha
+          permesso di affinare le mie tecniche e sviluppare una sensibilità
+          unica nel comprendere il corpo umano e il suo linguaggio.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+          Sono appassionato di osteopatia e continuo a formarmi per migliorare
+          il mio lavoro e offrire i migliori trattamenti ai miei pazienti.
+        </p>
+      </div>
+
+      <!-- Image Block -->
+      <div class="lg:w-1/2 h-96">
+        <div
+          class="w-full h-full bg-gray-400 rounded-lg shadow-lg object-cover"
+        >
+        </div>
+        <!-- Image Placeholder -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Call to Action -->
+  <section class="bg-gray-900 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+        Pronto a migliorare la tua salute?
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        Contattami oggi per una consulenza personalizzata e inizia il tuo
+        percorso verso il benessere.
+      </p>
+      <a
+        href="/contattami"
+        class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transition-all"
+      >
+        Contattami
+      </a>
+    </div>
+  </section>
 </Layout>
