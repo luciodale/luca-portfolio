@@ -1,5 +1,6 @@
 ---
 import BannerBlock from "../components/BannerBlock.astro";
+import CTA from "../components/CTA.astro";
 import Paragraph from "../components/Paragraph.astro";
 import ParagraphBlock from "../components/ParagraphBlock.astro";
 import Section from "../components/Section.astro";
@@ -78,22 +79,5 @@ import Layout from "../layouts/Layout.astro";
     </BannerBlock>
   </Section>
 
-  <!-- Section 5: Call to Action -->
-  <section class="bg-gray-900 py-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-        Pronto a migliorare la tua salute?
-      </h2>
-      <p class="text-lg md:text-xl text-gray-300 mb-8">
-        Contattami oggi per una consulenza personalizzata e inizia il tuo
-        percorso verso il benessere.
-      </p>
-      <a
-        href="/contattami"
-        class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transition-all"
-      >
-        Contattami
-      </a>
-    </div>
-  </section>
+  <CTA />
 </Layout>

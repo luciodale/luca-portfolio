@@ -1,18 +1,42 @@
 ---
+import Paragraph from "../components/Paragraph.astro";
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luca Del Sole">
-  <div
-    class="h-[50vh] bg-[url('/images/luca.jpg')] bg-no-repeat py-20 bg-contain bg-bottom"
-  >
+  <Section>
+    <div class="flex justify-center items-center">
+      <div>
+        <Title>Contattami</Title>
+        <Paragraph>
+          Se hai domande o desideri prenotare una consulenza, non esitare a
+          contattarmi.
+        </Paragraph>
+
+        <Paragraph>
+          <strong>Telefono:</strong> 333 123 4567
+        </Paragraph>
+        <Paragraph>
+          <strong>Email:</strong>
+          <a href="mailto:email-placeholder"> email-placeholder </a>
+        </Paragraph>
+
+        <Paragraph>
+          <strong>Indirizzo:</strong> Via Tiburtina Valeria, 75, 65128 Pescara PE
+        </Paragraph>
+      </div>
+    </div>
+  </Section>
+
+  <div class="flex justify-center pb-0 pt-20 md:pb-20 md:pt-0">
+    <iframe
+      class="w-full md:max-w-3xl h-96"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.6908992602616!2d14.203556190616748!3d42.45559239688488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1331a6116fcb6d55%3A0xdc6aa522d8a89db0!2sVia%20Tiburtina%20Valeria%2C%2075%2C%2065128%20Pescara%20PE!5e0!3m2!1sen!2sit!4v1715471365009!5m2!1sen!2sit"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.6908992602616!2d14.203556190616748!3d42.45559239688488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1331a6116fcb6d55%3A0xdc6aa522d8a89db0!2sVia%20Tiburtina%20Valeria%2C%2075%2C%2065128%20Pescara%20PE!5e0!3m2!1sen!2sit!4v1715471365009!5m2!1sen!2sit"
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
 </Layout>

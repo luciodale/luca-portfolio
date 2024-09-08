@@ -1,0 +1,17 @@
+---
+import { Link } from "./Link";
+import Section from "./Section.astro";
+---
+
+<Section bg="bg-gray-900">
+  <div class="flex flex-col justify-center items-center text-center">
+    <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+      Contattami per maggiori informazioni
+    </h2>
+    <p class="text-lg md:text-xl text-gray-300 mb-8">
+      Per scoprire come i miei trattamenti possono fare la differenza nella tua
+      vita, prenota una consulenza oggi stesso.
+    </p>
+    <Link href="/contattami" label="Scrivimi" mode="dark" />
+  </div>
+</Section>
