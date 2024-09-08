@@ -1,81 +1,65 @@
 ---
+import BannerBlock from "../components/BannerBlock.astro";
+import Paragraph from "../components/Paragraph.astro";
+import ParagraphBlock from "../components/ParagraphBlock.astro";
+import Section from "../components/Section.astro";
+import TextImage from "../components/TextImage.astro";
+import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Luca Del Sole">
-  <!-- Section 2: Split layout (Text + Image) -->
-  <section class="bg-gray-50 py-16">
-    <div
-      class="container mx-auto flex flex-col lg:flex-row gap-12 items-center justify-between px-6 lg:px-12"
+<Layout title="Chi Sono">
+  <Section>
+    <TextImage
+      imageSrc="https://www.centroabaton.it/wp-content/uploads/immagine-per-ginnastica-posturale-homepage.png"
     >
-      <!-- Text Block -->
-      <div class="lg:w-1/2">
-        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-          Percorso di studio
-        </h2>
-        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+      <div>
+        <Title> Percorso di studio </Title>
+        <Paragraph>
           Sono Luca Del Sole, Dottore Osteopata diplomato presso l' A.I.O.T
           (Accademia Italiana Osteopatia Tradizionale) con la votazione di 110 e
           lode. Dopo aver svolto il corso a tempo pieno della durata di 5 anni,
           ho concluso il mio percorso di studi con una tesi sperimentale dal
-          titolo: "L' efficacia del trattamento manipolativo osteopatico, nella
-          prevenzione degli infortuni in giovani atleti e hrv".
-        </p>
+          titolo: <em>
+            "L' efficacia del trattamento manipolativo osteopatico, nella
+            prevenzione degli infortuni in giovani atleti e hrv"</em
+          >.
+        </Paragraph>
       </div>
+    </TextImage>
+  </Section>
 
-      <!-- Image Block -->
-      <div class="lg:w-1/2 h-96">
-        <div
-          class="w-full h-full bg-gray-400 rounded-lg shadow-lg object-cover"
-        >
-        </div>
-        <!-- Image Placeholder -->
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-gray-50 py-16">
-    <div
-      class="container mx-auto flex flex-col lg:flex-row gap-12 items-center justify-between px-6 lg:px-12"
+  <Section bg="bg-gray-50">
+    <TextImage
+      reverse
+      imageSrc="https://www.centroabaton.it/wp-content/uploads/immagine-per-ginnastica-posturale-homepage.png"
     >
-      <div class="lg:w-1/2 h-96">
-        <div
-          class="w-full h-full bg-gray-400 rounded-lg shadow-lg object-cover"
-        >
-        </div>
-        <!-- Image Placeholder -->
+      <div>
+        <Title> Tirocini pratici </Title>
+        <ParagraphBlock>
+          <Paragraph>
+            Durante il mio percorso di studi ho svolto tirocinio pratico presso
+            diverse strutture:
+          </Paragraph>
+          <Paragraph>
+            <ul class="list-disc flex flex-col gap-2">
+              <li>Centro Abaton</li>
+              <li>Associazione di Volontariato Sottosopra, Pe</li>
+              <li>Fondazione Maria Grazia Barone, Fg</li>
+              <li>Agbe Associazione Genitori Bambini Emopatici</li>
+              <li>Arda Associazione Regionale Down Abruzzo</li>
+              <li>Convitto Pescara Calcio "Casa D'Annunzio"</li>
+            </ul>
+          </Paragraph>
+        </ParagraphBlock>
       </div>
-      <!-- Text Block -->
-      <div class="lg:w-1/2">
-        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-          Tirocini pratici
-        </h2>
-        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
-          Durante il mio percorso di studi ho svolto tirocinio pratico presso
-          diverse strutture:
-        </p>
-        <ul class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
-          <li>Centro Abaton</li>
-          <li>Associazione di Volontariato Sottosopra, Pe</li>
-          <li>Fondazione Maria Grazia Barone, Fg</li>
-          <li>Agbe Associazione Genitori Bambini Emopatici</li>
-          <li>Arda Associazione Regionale Down Abruzzo</li>
-          <li>Convitto Pescara Calcio "Casa D'Annunzio"</li>
-        </ul>
-      </div>
+    </TextImage>
+  </Section>
 
-      <!-- Image Block -->
-    </div>
-  </section>
-
-  <!-- Section 3: Full-width Image with Description -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6 lg:px-12">
-      <!-- Full-width Image Placeholder -->
-      <div class="max-w-2xl mx-auto">
-        <ul
-          class="text-lg md:text-xl leading-relaxed text-gray-700 list-disc list-inside"
-        >
+  <Section>
+    <BannerBlock>
+      <Paragraph>
+        <ul class="list-disc flex flex-col gap-2">
           <li>Ho conseguito l'esame di abilitazione alla professione.</li>
           <li>
             Sono iscritto regolarmente al ROI (Registro Osteopati Italiani).
@@ -90,9 +74,9 @@ import Layout from "../layouts/Layout.astro";
             delle cerebropotenzialità nei bambini).
           </li>
         </ul>
-      </div>
-    </div>
-  </section>
+      </Paragraph>
+    </BannerBlock>
+  </Section>
 
   <!-- Section 5: Call to Action -->
   <section class="bg-gray-900 py-16">

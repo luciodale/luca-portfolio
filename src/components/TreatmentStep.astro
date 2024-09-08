@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+const { title, description, iconSrc } = Astro.props;
+---
+
+<div
+  class="w-full max-w-sm bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+>
+  <!-- Top Section with Background Color -->
+  <div class="bg-primary p-6 flex flex-col items-center">
+    <img src={iconSrc} class="w-20 h-20 object-cover" alt="Icon" />
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t-2 border-gray-200"></div>
+
+  <!-- Bottom Section with Title and Description -->
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">
+      {title}
+    </h3>
+    <p class="text-gray-600 text-base leading-relaxed text-center">
+      {description}
+    </p>
+  </div>
+</div>

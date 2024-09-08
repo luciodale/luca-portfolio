@@ -1,179 +1,141 @@
 ---
+import Paragraph from "../components/Paragraph.astro";
+import ParagraphBlock from "../components/ParagraphBlock.astro";
+import Section from "../components/Section.astro";
+import TextImage from "../components/TextImage.astro";
+import Title from "../components/Title.astro";
+import TreatmentStep from "../components/TreatmentStep.astro";
+import TreatmentType from "../components/TreatmentType.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Trattamenti">
-  prima parte -
-  <!-- Hero Section -->
-  <section class="text-center flex flex-col items-center gap-6 py-10">
-    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-      Come funziona il trattamento
-    </h2>
-    <!-- Placeholder for the hero image -->
-
-    <p class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-2xl">
-      Traumi, infezioni, infiammazioni, stress psichico e fisico, l'acquisizione
-      di abitudini non naturali e la perdita di quelle salutari sono tutti
-      fattori che minacciano continuamente il nostro delicato equilibrio e la
-      nostra integrità psicofisica. Infatti le più comuni problematiche
-      muscolo-scheletriche e viscerali sono in continuo aumento, anche tra i
-      giovani.
-    </p>
-    <p class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-2xl">
-      La valutazione osteopatica mette in evidenza eventuali disfunzioni,
-      distretti corporei con restrizione dei movimenti fisiologici con
-      l'obiettivo di ripristinare lo stato di salute soggettivo. Poiché
-      l'osteopatia riequilibra le funzioni vitali ed agisce con uno scopo non
-      solo curativo ma anche preventivo, è adatta a una varietà molto ampia di
-      disturbi.
-    </p>
-  </section>
-
-  <!-- Treatment Sections -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 lg:px-12">
-      <h2
-        class="text-3xl md:text-4xl pb-6 font-semibold text-center text-gray-900 mb-4"
-      >
-        Gli step del trattamento
-      </h2>
-      <div class="flex flex-col gap-6 max-w-md mx-auto">
-        <!-- Card 1: Anamnesi -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-blue-500 text-3xl mr-4">
-            <!-- Placeholder for Anamnesi Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-notes-medical"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Anamnesi</h3>
-            <p class="text-gray-700">
-              Raccolta di informazioni sul paziente per comprendere meglio la
-              storia clinica e i sintomi.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2: Diagnosi -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-green-500 text-3xl mr-4">
-            <!-- Placeholder for Diagnosi Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-diagnoses"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Diagnosi</h3>
-            <p class="text-gray-700">
-              Valutazione e identificazione del problema per determinare il
-              percorso terapeutico più adatto.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 3: Trattamento -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-red-500 text-3xl mr-4">
-            <!-- Placeholder for Trattamento Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-hand-holding-medical"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Trattamento</h3>
-            <p class="text-gray-700">
-              Applicazione del trattamento terapeutico per risolvere il problema
-              o migliorare i sintomi.
-            </p>
-          </div>
-        </div>
+  <Section>
+    <TextImage
+      imageSrc="https://www.centroabaton.it/wp-content/uploads/immagine-per-ginnastica-posturale-homepage.png"
+    >
+      <div>
+        <Title> Come funziona il trattamento </Title>
+        <ParagraphBlock>
+          <Paragraph>
+            <strong>Traumi</strong>, <strong>infezioni</strong>, <strong
+              >infiammazioni</strong
+            >, <strong>stress psichico</strong> e <strong>fisico</strong>,
+            l'acquisizione di abitudini non naturali e la perdita di quelle
+            salutari sono tutti fattori che minacciano continuamente il nostro
+            delicato equilibrio e la nostra integrità psicofisica. Infatti le
+            più comuni problematiche <strong>muscolo-scheletriche</strong> e <strong
+              >viscerali</strong
+            > sono in continuo aumento, anche tra i giovani.
+          </Paragraph>
+          <Paragraph>
+            La valutazione osteopatica mette in evidenza eventuali disfunzioni,
+            distretti corporei con restrizione dei movimenti fisiologici con
+            l'obiettivo di ripristinare lo stato di salute soggettivo. Poiché
+            l'osteopatia riequilibra le funzioni vitali ed agisce con uno scopo
+            non solo curativo ma anche preventivo, è adatta a una varietà molto
+            ampia di disturbi.
+          </Paragraph>
+        </ParagraphBlock>
       </div>
-    </div>
-  </section>
+    </TextImage>
+  </Section>
 
-  <!-- Detailed Description Section -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto text-center px-6 lg:px-12"></div>
-    <!-- Full-width Image Placeholder -->
-    <div class="mt-10">
-      <p
-        class="text-lg pt-96 max-w-3xl m-auto md:text-xl leading-relaxed text-gray-700"
-      >
-        Ogni trattamento che offro è progettato per affrontare specifici
-        problemi di salute e migliorare il benessere generale. Utilizzo tecniche
-        avanzate e personalizzate per garantire risultati ottimali. Se hai
-        domande sui trattamenti o desideri discutere la tua situazione
-        specifica, non esitare a contattarmi.
+  <Section bg="bg-gray-50">
+    <div class="flex justify-center pb-6">
+      <Title> Gli step del trattamento </Title>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row gap-12 items-center lg:items-stretch justify-center"
+    >
+      <TreatmentStep
+        title="Anamnesi"
+        description="Raccolta di informazioni sul paziente per comprendere meglio la storia clinica e i sintomi."
+        iconSrc="/images/step1.svg"
+      />
+
+      <TreatmentStep
+        title="Diagnosi"
+        description="Valutazione e identificazione del problema per determinare il percorso terapeutico più adatto."
+        iconSrc="/images/step2.svg"
+      />
+
+      <TreatmentStep
+        title="Trattamento"
+        description="Applicazione del trattamento terapeutico per risolvere il problema o migliorare i sintomi."
+        iconSrc="/images/step3.svg"
+      />
+    </div>
+  </Section>
+
+  <div
+    style={{
+      background:
+        'url("https://images.unsplash.com/photo-1699523229208-be1e1dd9252d?q=80&w=1000")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <Section>
+      <div class="h-[80vh] flex justify-center items-end">
+        <Paragraph>
+          <div class="bg-white bg-opacity-70 p-8 sm:p-16">
+            Ogni trattamento che offro è progettato per affrontare specifici
+            problemi di salute e migliorare il benessere generale. Utilizzo
+            tecniche avanzate e personalizzate per garantire risultati ottimali.
+            Se hai domande sui trattamenti o desideri discutere la tua
+            situazione specifica, non esitare a contattarmi.
+          </div>
+        </Paragraph>
+      </div>
+    </Section>
+  </div>
+  <Section bg="bg-gray-50">
+    <div class="flex justify-center pb-6">
+      <Title> I tipi di trattamento </Title>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row flex-wrap gap-12 items-center lg:items-stretch justify-center"
+    >
+      <TreatmentType
+        title="Problematiche disfunzionali di neonati e bambini"
+        description="Traumi durante il parto, coliche, disturbi del sonno, problemi digestivi, asma, otiti, problemi posturali, disordini del sistema nervoso."
+      />
+      <TreatmentType
+        title="Disordini posturali come le asimmetrie scheletriche"
+      />
+      <TreatmentType
+        title="Disfunzioni del sistema neuro-muscolo-scheletrico"
+        description="Dolori articolari, muscolari, cervicali, dorsali, lombari, sciatalgie, lussazioni, tendiniti, borsiti, epicondiliti, tunnel carpale, cefalee, emicranie, vertigini, nevralgie, dolori articolari, muscolari, cervicali, dorsali, lombari, sciatalgie, lussazioni, tendiniti, borsiti, epicondiliti, tunnel carpale, cefalee, emicranie, vertigini, nevralgie."
+      />
+      <TreatmentType
+        title="Disturbi intestinali come stipsi, colite, gastrite, reflusso"
+      />
+      <TreatmentType title="Disfunzioni Mandibolari" />
+      <TreatmentType title="Disturbi oculari" />
+      <TreatmentType title="Disturbi ginecologici" />
+      <TreatmentType
+        title="Problemi urologici come enuresi ed infezioni vescicali ricorrenti"
+      />
+    </div>
+  </Section>
+
+  <!-- Call to Action -->
+  <section class="bg-gray-900 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+        Contattami per maggiori informazioni
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        Per scoprire come i miei trattamenti possono fare la differenza nella
+        tua vita, prenota una consulenza oggi stesso.
       </p>
-    </div>
-  </section>
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 lg:px-12">
-      <h2
-        class="text-3xl md:text-4xl pb-6 font-semibold text-center text-gray-900 mb-4"
+      <a
+        href="/contattami"
+        class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transition-all"
       >
-        Gli step del trattamento
-      </h2>
-      <div class="flex flex-col gap-6 max-w-md mx-auto">
-        <!-- Card 1: Anamnesi -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-blue-500 text-3xl mr-4">
-            <!-- Placeholder for Anamnesi Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-notes-medical"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Anamnesi</h3>
-            <p class="text-gray-700">
-              Raccolta di informazioni sul paziente per comprendere meglio la
-              storia clinica e i sintomi.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2: Diagnosi -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-green-500 text-3xl mr-4">
-            <!-- Placeholder for Diagnosi Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-diagnoses"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Diagnosi</h3>
-            <p class="text-gray-700">
-              Valutazione e identificazione del problema per determinare il
-              percorso terapeutico più adatto.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 3: Trattamento -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center">
-          <div class="text-red-500 text-3xl mr-4">
-            <!-- Placeholder for Trattamento Icon (e.g., FontAwesome icon) -->
-            <i class="fas fa-hand-holding-medical"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-2">Trattamento</h3>
-            <p class="text-gray-700">
-              Applicazione del trattamento terapeutico per risolvere il problema
-              o migliorare i sintomi.
-            </p>
-          </div>
-        </div>
-      </div>
+        Prenota una Consulenza
+      </a>
     </div>
   </section>
 </Layout>
-
-<!-- Call to Action -->
-<section class="bg-gray-900 py-16">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-      Contattami per maggiori informazioni
-    </h2>
-    <p class="text-lg md:text-xl text-gray-300 mb-8">
-      Per scoprire come i miei trattamenti possono fare la differenza nella tua
-      vita, prenota una consulenza oggi stesso.
-    </p>
-    <a
-      href="/contattami"
-      class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transition-all"
-    >
-      Prenota una Consulenza
-    </a>
-  </div>
-</section>

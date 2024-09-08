@@ -1,88 +1,82 @@
 ---
-import ImageChiSono from "../components/ImageChiSono.astro";
-import ImageInfo from "../components/ImageInfo.astro";
-import ImageTrattamenti from "../components/ImageTrattamenti.astro";
+import BannerBlock from "../components/BannerBlock.astro";
 import { Link } from "../components/Link";
+import Paragraph from "../components/Paragraph.astro";
+import ParagraphBlock from "../components/ParagraphBlock.astro";
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luca Del Sole">
-  <div
-    class="h-[80vh] bg-[url('/images/luca.jpg')] bg-no-repeat bg-contain bg-bottom"
-  >
-  </div>
-  <div class="py-10 px-4 bg-primary text-white">
-    <div class="max-w-3xl mx-auto font-light text-lg">
-      Benvenuti nel mio studio di osteopatia, dove la vostra salute e il vostro
-      benessere sono la mia priorità. Con anni di esperienza e una formazione
-      approfondita nel campo dell'osteopatia, mi impegno a fornire trattamenti
-      personalizzati per aiutarvi a raggiungere il vostro massimo potenziale di
-      salute.
-    </div>
-  </div>
+  <img
+    class="w-full h-[80vh] object-cover"
+    src="https://plus.unsplash.com/premium_photo-1661751442896-f7cad810317c?w=2000"
+    alt=""
+  />
+  <Section bg="bg-primary">
+    <BannerBlock>
+      <Paragraph color="text-white">
+        <img class="pb-6 w-20" src="/images/quote.svg" alt="quote" />
+        Benvenuti nel mio studio di osteopatia, dove la vostra salute e il vostro
+        benessere sono la mia priorità. Con anni di esperienza e una formazione approfondita
+        nel campo dell'osteopatia, mi impegno a fornire trattamenti personalizzati
+        per aiutarvi a raggiungere il vostro massimo potenziale di salute.
+      </Paragraph>
+    </BannerBlock>
+  </Section>
 
-  <div
-    class="py-10 px-4 bg-secondary flex gap-6 md:gap-10 md:items-center flex-col md:flex-row"
-  >
-    <div class="w-1/2 md:flex justify-end flex-shrink-0">
-      <ImageChiSono className="md:w-96 hidden md:block fill-primary" />
-      <div class="uppercase text-primary text-4xl md:hidden font-light">
-        chi sono
+  <Section bg="bg-secondary">
+    <BannerBlock>
+      <div>
+        <Title>chi sono</Title>
+        <ParagraphBlock>
+          <Paragraph>
+            Sono <span class="font-medium">Luca Del Sole </span>, un'osteopata
+            dedicato al benessere dei miei pazienti. Laureato presso <a
+              class="underline"
+              href="https://www.aiotpescara.it/">l’A.I.O.T</a
+            > e con 6 anni di esperienza pratica, ho sviluppato un approccio olistico
+            alla cura che integra tecniche manuali e una profonda comprensione del
+            corpo umano.
+          </Paragraph>
+          <Link label="approfondisci" href="/chi-sono" />
+        </ParagraphBlock>
       </div>
-    </div>
-    <div class="flex flex-col gap-6 md:gap-10">
-      <div class="md:max-w-2xl mx-auto font-light text-lg text-dark">
-        Sono <span class="font-medium">Luca Del Sole </span>, un'osteopata
-        dedicato al benessere dei miei pazienti. Laureato presso <a
-          class="underline"
-          href="https://www.aiotpescara.it/">l’A.I.O.T</a
-        > e con 6 anni di esperienza pratica, ho sviluppato un approccio olistico
-        alla cura che integra tecniche manuali e una profonda comprensione del corpo
-        umano.
-      </div>
-      <Link label="approfondisci" href="/chi-sono" />
-    </div>
-  </div>
+    </BannerBlock>
+  </Section>
 
-  <div class="py-10 px-4 bg-primary flex flex-col gap-6 md:gap-10">
-    <div class="flex w-full md:justify-center flex-shrink-0">
-      <ImageTrattamenti
-        className="w-full max-w-3xl hidden md:block fill-secondary"
-      />
-      <div class="uppercase text-white text-4xl font-light md:hidden">
-        trattamenti
+  <Section bg="bg-primary">
+    <BannerBlock>
+      <div>
+        <Title color="text-white">trattamenti</Title>
+        <ParagraphBlock>
+          <Paragraph color="text-white">
+            Offro una vasta gamma di trattamenti osteopatici, personalizzati per
+            soddisfare le esigenze individuali di ciascun paziente. Utilizzo un
+            approccio completo che considera non solo i sintomi evidenti, ma
+            anche le cause sottostanti del disagio, lavorando per ripristinare
+            l'equilibrio e la funzione ottimale del corpo.
+          </Paragraph>
+          <Link label="approfondisci" href="/chi-sono" mode="dark" />
+        </ParagraphBlock>
       </div>
-    </div>
-    <div class="">
-      <div class="flex flex-col gap-10 max-w-screen-md mx-auto">
-        <div class="md:max-w-2xl font-light text-lg text-white">
-          Offro una vasta gamma di trattamenti osteopatici, personalizzati per
-          soddisfare le esigenze individuali di ciascun paziente. Utilizzo un
-          approccio completo che considera non solo i sintomi evidenti, ma anche
-          le cause sottostanti del disagio, lavorando per ripristinare
-          l'equilibrio e la funzione ottimale del corpo.
-        </div>
-        <Link label="approfondisci" href="/chi-sono" mode="dark" />
-      </div>
-    </div>
-  </div>
+    </BannerBlock>
+  </Section>
 
-  <div
-    class="py-10 px-4 bg-secondary flex gap-6 md:gap-10 md:items-center flex-col md:flex-row"
-  >
-    <div class="w-1/2 md:flex justify-end flex-shrink-0">
-      <ImageInfo className="md:w-96 hidden md:block fill-primary" />
-      <div class="uppercase text-primary text-4xl md:hidden font-light">
-        info
+  <Section>
+    <BannerBlock>
+      <div>
+        <Title>contatti</Title>
+        <ParagraphBlock>
+          <Paragraph>
+            Se desiderate prenotare una visita o avere maggiori informazioni sui
+            miei servizi, non esitate a contattarmi. Sono qui per aiutarvi a
+            raggiungere il vostro obiettivo di salute e benessere.
+          </Paragraph>
+          <Link label="contattami" href="/contattami" />
+        </ParagraphBlock>
       </div>
-    </div>
-    <div class="flex flex-col gap-6 md:gap-10">
-      <div class="md:max-w-xl md:mx-auto font-light text-lg text-dark">
-        Se desiderate prenotare una visita o avere maggiori informazioni sui
-        miei servizi, non esitate a contattarmi. Sono qui per aiutarvi a
-        raggiungere il vostro obiettivo di salute e benessere.
-      </div>
-      <Link label="contattami" href="/contattami" />
-    </div>
-  </div>
+    </BannerBlock>
+  </Section>
 </Layout>

@@ -1,0 +1,109 @@
+---
+import FlipIcon from "./FlipIcon.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div
+  data-description={description}
+  class:list={[
+    "flip-card-wrapper relative w-full max-w-80 rounded-lg shadow-md overflow-hidden flex flex-col justify-center items-center",
+    description && "cursor-pointer",
+  ]}
+>
+  <!-- Card container with flip effect -->
+  <div
+    class="flip-card bg-white relative w-full h-full transition-transform duration-500"
+  >
+    <!-- Front Side -->
+    <div
+      class:list={[
+        "flip-card-front absolute w-full h-full bg-white flex items-center flex-col py-10 gap-4 backface-hidden",
+        description ? "justify-between" : "justify-center",
+      ]}
+    >
+      <div class="absolute bottom-0 border-t-4 border-primary w-1/2"></div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center px-6">
+        {title}
+      </h3>
+
+      {description && <FlipIcon color="stroke-primary" />}
+    </div>
+
+    <!-- Back Side -->
+    <div
+      class="flip-card-back absolute w-full h-full bg-primary text-white flex items-center justify-center flex-col p-6 backface-hidden rotate-y-180"
+    >
+      <div
+        class="flip-card-front absolute w-full h-full bg-primary flex items-center justify-between flex-col py-4 gap-4 backface-hidden"
+      >
+        <div class="absolute bottom-0 border-t-4 border-white w-1/2"></div>
+
+        <p class="leading-relaxed text-white px-6 overflow-y-auto h-full">
+          {description}
+        </p>
+        <FlipIcon width="30" color="stroke-white" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- astro is smart enough to only keep one instance of this script 
+ even if the component is called mulplitle times from the same page -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".flip-card-wrapper");
+
+    // Loop through each card and add event listener
+    cards.forEach((card) => {
+      const cardInner = card.querySelector(".flip-card");
+      const description = card.getAttribute("data-description");
+      description &&
+        card.addEventListener("click", () => {
+          cardInner?.classList.toggle("rotate-y-180");
+        });
+    });
+  });
+</script>
+
+<style>
+  /* Style for the card wrapper */
+  .flip-card-wrapper {
+    perspective: 1000px; /* Enables 3D effect */
+    height: 300px; /* Define the height for the card */
+  }
+
+  .flip-card {
+    transform-style: preserve-3d; /* Enables 3D transforms */
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    backface-visibility: hidden; /* Hide the back when the front is visible */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg); /* Initially rotate the back side */
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg); /* Flip effect when clicked */
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+</style>
