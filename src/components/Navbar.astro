@@ -1,6 +1,102 @@
 ---
-import NavbarTSX from "./Navbar";
+import { navLinks, navbarHeight } from "../globals";
+import LogoSignature from "./LogoSignature.astro";
+
 const currentHref = Astro.url.pathname;
 ---
 
-<NavbarTSX client:visible {currentHref} />
+<nav style={`height: ${navbarHeight}px`} class="relative bg-dark z-50">
+  <div
+    class="mx-auto flex h-full max-w-screen-xl items-center justify-between px-4 py-1"
+  >
+    <a
+      href="/"
+      class="flex items-center h-full py-1 justify-center space-x-3 rtl:space-x-reverse"
+    >
+      <LogoSignature className="fill-white h-full" />
+    </a>
+
+    <button
+      id="burger-button"
+      type="button"
+      class="inline-flex h-12 w-12 items-center justify-center rounded-lg p-2 text-sm text-white focus:outline-none lg:hidden"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop navigation links -->
+    <div class="gap-10 hidden lg:flex">
+      {
+        navLinks.map(({ href, name }) => (
+          <a
+            href={href}
+            class:list={[
+              "rounded text-center font-light uppercase transition-colors",
+              currentHref === href
+                ? "text-accent"
+                : "text-white hover:text-gray-200",
+            ]}
+          >
+            {name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class:list={[
+      "fixed left-0 flex h-[100dvh] w-full flex-col overflow-hidden backdrop-blur-sm bg-dark/90 transition-all xl:hidden",
+      "max-h-0", // default state for hidden menu
+    ]}
+  >
+    {
+      navLinks.map(({ name, href }) => {
+        const active = currentHref === href;
+        console.log("active", active, currentHref, href);
+        return (
+          <a
+            class:list={[
+              " uppercase flex items-center justify-center w-full py-4 text-xl font-medium transition-all duration-300",
+              active ? "text-accent border-b-2 border-accent" : "text-white",
+            ]}
+            href={href}
+          >
+            {name}
+          </a>
+        );
+      })
+    }
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerButton = document.getElementById("burger-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    let isMenuOpen = false;
+
+    burgerButton?.addEventListener("click", () => {
+      isMenuOpen = !isMenuOpen;
+      document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+
+      if (mobileMenu) mobileMenu.style.maxHeight = isMenuOpen ? "100vh" : "0";
+    });
+  });
+</script>

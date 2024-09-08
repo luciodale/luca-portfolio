@@ -1,6 +1,6 @@
 ---
 import { navLinks } from "../globals";
-import { Logo } from "./Logo";
+import LogoSignature from "./LogoSignature.astro";
 
 const currentHref = Astro.url.pathname;
 ---
@@ -11,7 +11,7 @@ const currentHref = Astro.url.pathname;
   >
     <div>
       <a href="/" class="mb-4 flex items-center justify-center space-x-3">
-        <Logo className="fill-white w-36" />
+        <LogoSignature className="fill-white w-36" />
       </a>
       <ul
         class="flex flex-wrap items-center justify-center gap-4 text-sm font-light"
