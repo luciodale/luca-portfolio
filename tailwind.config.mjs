@@ -10,9 +10,9 @@ export default {
         rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#0074A1", // A strong, harmonious blue
-        secondary: "#E1F5F9", // A softer, complementary light blue
-        accent: "#F9F4A7", // A gentle, warm yellow for highlights
+        primary: "#0074A1", 
+        secondary: "#E1F5F9", 
+        accent: "#F9F4A7", 
         dark: "#002A3B",
       },
     },

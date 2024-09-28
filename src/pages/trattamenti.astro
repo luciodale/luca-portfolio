@@ -51,53 +51,45 @@ import Layout from "../layouts/Layout.astro";
     >
       <TreatmentStep
         title="Anamnesi"
-        description="Raccolta di informazioni sul paziente per comprendere meglio la storia clinica e i sintomi."
+        description="È la prima fase della seduta necessaria per raccogliere i dati clinici e per conoscere la storia del paziente, sia remota che recente."
         iconSrc="/images/step1.svg"
       />
 
       <TreatmentStep
         title="Diagnosi"
-        description="Valutazione e identificazione del problema per determinare il percorso terapeutico più adatto."
+        description="Si prosegue con una valutazione osteopaticha che ha lo scopo di individuare le aree responsabili della sintomatologia riportata dal paziente. La valutazione viene effettuata su tutti i distretti corporei e non solo sulla zona che manifesta il sintomo."
         iconSrc="/images/step2.svg"
       />
 
       <TreatmentStep
         title="Trattamento"
-        description="Applicazione del trattamento terapeutico per risolvere il problema o migliorare i sintomi."
+        description="Si prosegue con la fase del trattamento, con lo scopo di normalizzare le aree che si sono individuate nella valutazione. In fine, si termina con una seconda valutazione di tutto l'organismo per controllare la risposta del paziente al trattamento."
         iconSrc="/images/step3.svg"
       />
     </div>
   </Section>
 
-  <div
-    style={{
-      background:
-        'url("https://images.unsplash.com/photo-1699523229208-be1e1dd9252d?q=80&w=1000")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  >
-    <Section>
-      <div class="h-[80vh] flex justify-center items-end">
-        <Paragraph>
-          <div class="bg-white bg-opacity-70 p-8 sm:p-16">
-            Ogni trattamento che offro è progettato per affrontare specifici
-            problemi di salute e migliorare il benessere generale. Utilizzo
-            tecniche avanzate e personalizzate per garantire risultati ottimali.
-            Se hai domande sui trattamenti o desideri discutere la tua
-            situazione specifica, non esitare a contattarmi.
-          </div>
-        </Paragraph>
-      </div>
-    </Section>
-  </div>
+  <Section>
+    <Paragraph>
+      Ogni trattamento che offro è progettato per affrontare specifici problemi
+      di salute e migliorare il benessere generale. Utilizzo tecniche avanzate e
+      personalizzate per garantire risultati ottimali. Se hai domande sui
+      trattamenti o desideri discutere la tua situazione specifica, non esitare
+      a contattarmi.
+    </Paragraph>
+  </Section>
+
   <Section bg="bg-gray-50">
     <div class="flex justify-center pb-6">
-      <Title> I tipi di trattamento </Title>
+      <Title> Cosa tratta </Title>
     </div>
     <div
       class="flex flex-col lg:flex-row flex-wrap gap-12 items-center lg:items-stretch justify-center"
     >
+      <TreatmentType
+        title="Problematiche disfunzionali di neonati e bambini"
+        description="Traumi durante il parto, coliche, disturbi del sonno, problemi digestivi, asma, otiti, problemi posturali, disordini del sistema nervoso."
+      />
       <TreatmentType
         title="Problematiche disfunzionali di neonati e bambini"
         description="Traumi durante il parto, coliche, disturbi del sonno, problemi digestivi, asma, otiti, problemi posturali, disordini del sistema nervoso."
@@ -118,6 +110,19 @@ import Layout from "../layouts/Layout.astro";
       <TreatmentType
         title="Problemi urologici come enuresi ed infezioni vescicali ricorrenti"
       />
+    </div>
+  </Section>
+  <Section>
+    <div class="flex justify-center pb-6">
+      <Title> Quando rivolgersi all'osteopata </Title>
+      <Paragraph>
+        L'osteopatia è indicata in tutte le fasce d'età, in quanto prevede
+        l'utilizzo di diversi tipi di tecniche e approcci osteopatici, che si
+        adattano perfettamente ad ogni tipologia di paziente e a migliorare e
+        risolvere diverse problematiche fisiche, riportando la persona ad un
+        miglior stato di equilibrio e benessere, oltre che ad essere molto utile
+        nell'ambito della prevenzione.
+      </Paragraph>
     </div>
   </Section>
 
