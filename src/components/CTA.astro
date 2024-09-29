@@ -4,26 +4,34 @@ import Section from "./Section.astro";
 ---
 
 <Section bg="bg-gray-900">
-  <div class="flex flex-col justify-center items-center text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6 uppercase">
-      Prenota un appuntamento
-    </h2>
-    <h2 class="text-3xl md:text-2xl font-semibold text-white mb-6 uppercase">
-      Dove ricevo:
-    </h2>
-    <Paragraph color="text-white">
-      <strong>Indirizzo:</strong> Via Tiburtina Valeria, 75, 65128 Pescara PE
-    </Paragraph>
+  <div
+    class="flex text-white flex-col gap-6 justify-center mx-auto max-w-prose"
+  >
+    <h2 class="text-4xl uppercase">Prenota un appuntamento</h2>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-2xl uppercase text-accent">Dove ricevo:</h2>
+      <Paragraph color="text-white">
+        <div class="flex gap-2 items-center">
+          <img src="/images/map.svg" class="w-6 inline-block" alt="location" />
+          Via Tiburtina Valeria, 75, 65128 Pescara PE
+        </div>
+      </Paragraph>
+    </div>
 
-    <h2 class="text-3xl md:text-2xl font-semibold text-white mb-6 uppercase">
-      Contatti:
-    </h2>
-    <Paragraph color="text-white">
-      <strong>Telefono:</strong> 3295447257
-    </Paragraph>
-    <Paragraph color="text-white">
-      <strong>Email:</strong>
-      <a href="mailto:email-placeholder"> delsole.luca@gmail.com </a>
-    </Paragraph>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-2xl uppercase text-accent">Contatti:</h2>
+      <Paragraph color="text-white">
+        <div class="flex gap-2 items-center">
+          <img src="/images/phone.svg" class="w-6 inline-block" alt="phone" />
+          3295447257
+        </div>
+      </Paragraph>
+      <Paragraph color="text-white">
+        <div class="flex gap-2 items-center">
+          <img src="/images/email.svg" class="w-6 inline-block" alt="email" />
+          <a href="mailto:email-placeholder"> delsole.luca@gmail.com </a>
+        </div>
+      </Paragraph>
+    </div>
   </div>
 </Section>

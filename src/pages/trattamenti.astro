@@ -1,4 +1,5 @@
 ---
+import BannerBlock from "../components/BannerBlock.astro";
 import CTA from "../components/CTA.astro";
 import Paragraph from "../components/Paragraph.astro";
 import ParagraphBlock from "../components/ParagraphBlock.astro";
@@ -69,14 +70,18 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </Section>
 
-  <Section>
-    <Paragraph>
-      Ogni trattamento che offro è progettato per affrontare specifici problemi
-      di salute e migliorare il benessere generale. Utilizzo tecniche avanzate e
-      personalizzate per garantire risultati ottimali. Se hai domande sui
-      trattamenti o desideri discutere la tua situazione specifica, non esitare
-      a contattarmi.
-    </Paragraph>
+  <Section bg="bg-primary">
+    <BannerBlock>
+      <Paragraph color="text-white">
+        <div class="text-2xl">
+          Ogni trattamento che offro è progettato per affrontare specifici
+          problemi di salute e migliorare il benessere generale. Utilizzo
+          tecniche avanzate e personalizzate per garantire risultati ottimali.
+          Se hai domande sui trattamenti o desideri discutere la tua situazione
+          specifica, non esitare a contattarmi.
+        </div>
+      </Paragraph>
+    </BannerBlock>
   </Section>
 
   <Section bg="bg-gray-50">
@@ -86,20 +91,12 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="flex flex-col lg:flex-row flex-wrap gap-12 items-center lg:items-stretch justify-center"
     >
-      <TreatmentType
-        title="Problematiche disfunzionali di neonati e bambini"
-        description="Traumi durante il parto, coliche, disturbi del sonno, problemi digestivi, asma, otiti, problemi posturali, disordini del sistema nervoso."
-      />
-      <TreatmentType
-        title="Problematiche disfunzionali di neonati e bambini"
-        description="Traumi durante il parto, coliche, disturbi del sonno, problemi digestivi, asma, otiti, problemi posturali, disordini del sistema nervoso."
-      />
+      <TreatmentType title="Problematiche disfunzionali di neonati e bambini" />
       <TreatmentType
         title="Disordini posturali come le asimmetrie scheletriche"
       />
       <TreatmentType
         title="Disfunzioni del sistema neuro-muscolo-scheletrico"
-        description="Dolori articolari, muscolari, cervicali, dorsali, lombari, sciatalgie, lussazioni, tendiniti, borsiti, epicondiliti, tunnel carpale, cefalee, emicranie, vertigini, nevralgie, dolori articolari, muscolari, cervicali, dorsali, lombari, sciatalgie, lussazioni, tendiniti, borsiti, epicondiliti, tunnel carpale, cefalee, emicranie, vertigini, nevralgie."
       />
       <TreatmentType
         title="Disturbi intestinali come stipsi, colite, gastrite, reflusso"
@@ -113,17 +110,24 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </Section>
   <Section>
-    <div class="flex justify-center pb-6">
-      <Title> Quando rivolgersi all'osteopata </Title>
-      <Paragraph>
-        L'osteopatia è indicata in tutte le fasce d'età, in quanto prevede
-        l'utilizzo di diversi tipi di tecniche e approcci osteopatici, che si
-        adattano perfettamente ad ogni tipologia di paziente e a migliorare e
-        risolvere diverse problematiche fisiche, riportando la persona ad un
-        miglior stato di equilibrio e benessere, oltre che ad essere molto utile
-        nell'ambito della prevenzione.
-      </Paragraph>
-    </div>
+    <TextImage
+      reverse
+      imageSrc="https://www.centroabaton.it/wp-content/uploads/immagine-per-ginnastica-posturale-homepage.png"
+    >
+      <div>
+        <Title> Quando rivolgersi all'osteopata </Title>
+        <ParagraphBlock>
+          <Paragraph>
+            L'osteopatia è indicata in tutte le fasce d'età, in quanto prevede
+            l'utilizzo di diversi tipi di tecniche e approcci osteopatici, che
+            si adattano perfettamente ad ogni tipologia di paziente e a
+            migliorare e risolvere diverse problematiche fisiche, riportando la
+            persona ad un miglior stato di equilibrio e benessere, oltre che ad
+            essere molto utile nell'ambito della prevenzione.
+          </Paragraph>
+        </ParagraphBlock>
+      </div>
+    </TextImage>
   </Section>
 
   <CTA />
