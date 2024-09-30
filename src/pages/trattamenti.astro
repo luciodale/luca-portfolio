@@ -85,27 +85,80 @@ import Layout from "../layouts/Layout.astro";
   </Section>
 
   <Section bg="bg-gray-50">
-    <div class="flex justify-center pb-6">
+    <div class="flex justify-center flex-col items-center pb-6">
       <Title> Cosa tratta </Title>
+      <Paragraph>
+        L'osteopatia, pur basandosi sulle scienze fondamentali e le conoscenze
+        mediche tradizionali (anatomia, fisiologia, biomeccanica, neurologia,
+        ecc...) attraverso tecniche specifiche si dimostra efficace per il
+        trattamento di disturbi che interessano:
+      </Paragraph>
     </div>
     <div
       class="flex flex-col lg:flex-row flex-wrap gap-12 items-center lg:items-stretch justify-center"
     >
-      <TreatmentType title="Problematiche disfunzionali di neonati e bambini" />
       <TreatmentType
-        title="Disordini posturali come le asimmetrie scheletriche"
+        title="SISTEMA MUSCOLO SCHELETRICO"
+        description={[
+          "Cervicalgia, dorsalgia, lombalgia",
+          "Dolori muscolari e articolari (spalla, ginocchio, anca)",
+          "Scoliosi, dismetrie degli arti e asimmetrie disfunzionali",
+          "Dolori costali e intercostali",
+          "Dolore a livello scapolare delle spalle",
+          "Epicondilite e tendinite",
+          "Pubalgia e problematiche a livello dell'anca",
+          "Distorsioni, contratture, esiti di fratture e di interventi chirurgici",
+          "Traumi contusivi",
+        ]}
       />
       <TreatmentType
-        title="Disfunzioni del sistema neuro-muscolo-scheletrico"
+        title="SISTEMA DIGESTIVO"
+        description={[
+          "Stipsi",
+          "Colite",
+          "Reflusso gastroesofageo",
+          "Gastrite",
+        ]}
       />
       <TreatmentType
-        title="Disturbi intestinali come stipsi, colite, gastrite, reflusso"
+        title="SISTEMA NERVOSO"
+        description={[
+          "Sciatalgia, cruralgia, nevralgia trigeminale",
+          "Sindrome del tunnel carpale, emicrania",
+          "Enuresi, cefalee",
+          "Disturbi del sonno, ansia",
+        ]}
       />
-      <TreatmentType title="Disfunzioni Mandibolari" />
-      <TreatmentType title="Disturbi oculari" />
-      <TreatmentType title="Disturbi ginecologici" />
       <TreatmentType
-        title="Problemi urologici come enuresi ed infezioni vescicali ricorrenti"
+        title="SISTEMA GENITO-URINARIO"
+        description={[
+          "Dismenorrea",
+          "Irregolarità del ciclo mestruale",
+          "Dolore pelvico acuto e cronico",
+        ]}
+      />
+      <TreatmentType
+        title="OSTEOPATIA E OTORINOLARINGOIATRIA"
+        description={["Riniti, sinusiti, otiti, vertigini, acufeni"]}
+      />
+      <TreatmentType
+        title="OSTEOPATIA E ODONTOIATRIA"
+        description={[
+          "Problematiche dell'articolazione temporo-mandibolare, dolore nella zona mandibolare, collo, viso, orecchie, spalle e mal di testa",
+          "Malocclusione",
+        ]}
+      />
+      <TreatmentType
+        title="OSTEOPATIA E PEDIATRIA"
+        description={[
+          "Plagiocefalia",
+          "Problemi digestivi, reflusso gastroesofageo e rigurgiti",
+          "Problematiche riguardanti la suzione, coliche e stipsi",
+          "Problematiche legate alla crescita e allo sviluppo motorio",
+          "Disturbi del sonno, irritabilità",
+          "Torcicollo congenito",
+          "Otiti e sinusiti",
+        ]}
       />
     </div>
   </Section>
