@@ -12,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Luca Del Sole">
   <div
-    class="relative h-[80vh] bg-[url('/home2.jpg')] bg-no-repeat bg-cover xl:bg-top bg-center overflow-hidden flex justify-end flex-col"
+    class="relative h-[80vh] bg-[url('/home2.jpg')] bg-no-repeat bg-cover bg-center overflow-hidden flex justify-end flex-col"
   >
     <div
       class="relative mx-auto bottom-20 bg-white max-w-prose p-10 bg-opacity-80"
@@ -28,16 +28,25 @@ import Layout from "../layouts/Layout.astro";
   <Section bg="bg-primary">
     <BannerBlock>
       <Paragraph color="text-white">
-        Benvenuti nel mio studio, dove la vostra salute e il corretto
-        funzionamento del corpo sono al centro del mio lavoro. <br />
-        <br />
-        Il mio obiettivo è prendermi cura dei pazienti, cercando l'origine primaria
-        delle loro problematiche, e occupandomi di ogni aspetto della persona, non
-        limitandomi alla regione del sintomo o del dolore.
-        <br />
-        <br />
-        Il mio approccio considera ogni parte del sistema muscolo scheletrico, fasciale,
-        nervoso e viscerale, come collegata ed interconnessa.
+        <div class="flex flex-col gap-3">
+          <div>
+            Benvenuti nel mio studio, dove la vostra salute e il corretto
+            funzionamento del corpo sono al centro del mio lavoro.
+          </div>
+
+          <div>
+            Il mio obiettivo è prendermi cura dei pazienti, cercando l'origine
+            primaria delle loro problematiche, e occupandomi di ogni aspetto
+            della persona, non limitandomi alla regione del sintomo o del
+            dolore.
+          </div>
+
+          <div>
+            Il mio approccio considera ogni parte del sistema muscolo
+            scheletrico, fasciale, nervoso e viscerale, come collegata ed
+            interconnessa.
+          </div>
+        </div>
       </Paragraph>
     </BannerBlock>
   </Section>
@@ -129,11 +138,10 @@ import Layout from "../layouts/Layout.astro";
 
       <TreatmentGroup
         title="osteopatia e mal di testa"
-        description={`Nel grande campo del mal di testa sia le cefalee che le emicranie possono essere trattate 
-      dall'osteopata il quale individuerà e correggerà le disfunzioni somatiche che ostacolano il flusso arterioso, 
-      riducono il ritorno venoso e disturbano la corretta conduzione dei segnali nervosi. Migliorando la sintomatologia 
-      si ottengono benefici anche dei disturbi correlati come stanchezza, insonnia, irritabilità e difficolità di 
-      concentrazione.`}
+        description={`Sia le cefalee che le emigranie possono essere trattate dall'osteopata, il quale individuerà e 
+        correggerà le disfunzioni somatiche che ostacolano il flusso arterioso, riducono il ritorno venoso e disturbano 
+        la corretta conduzione dei segnali nervosi. Migliorando la sintomatologia, si ottengono benefici anche dei 
+        disturbi correlati come stanchezza, insonnia, irritabilità e difficoltà di concentrazione.`}
       />
     </div>
   </div>
