@@ -11,12 +11,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luca Del Sole">
-  <div class="relative h-[80vh] overflow-hidden flex justify-end flex-col">
-    <img
-      class="w-full h-full absolute top-0 left-0 object-cover"
-      src="https://plus.unsplash.com/premium_photo-1661751442896-f7cad810317c?w=2000"
-      alt=""
-    />
+  <div
+    class="relative h-[80vh] bg-[url('/home2.jpg')] bg-no-repeat bg-cover xl:bg-top bg-center overflow-hidden flex justify-end flex-col"
+  >
     <div
       class="relative mx-auto bottom-20 bg-white max-w-prose p-10 bg-opacity-80"
     >
@@ -32,11 +29,15 @@ import Layout from "../layouts/Layout.astro";
     <BannerBlock>
       <Paragraph color="text-white">
         Benvenuti nel mio studio, dove la vostra salute e il corretto
-        funzionamento del corpo sono al centro del mio lavoro. Grazie a una
-        solida esperienza in osteopatia, mi dedico a identificare e trattare le
-        cause profonde dei disturbi, affrontando ogni aspetto della persona con
-        un approccio completo e mirato.
+        funzionamento del corpo sono al centro del mio lavoro. <br />
         <br />
+        Il mio obiettivo è prendermi cura dei pazienti, cercando l'origine primaria
+        delle loro problematiche, e occupandomi di ogni aspetto della persona, non
+        limitandomi alla regione del sintomo o del dolore.
+        <br />
+        <br />
+        Il mio approccio considera ogni parte del sistema muscolo scheletrico, fasciale,
+        nervoso e viscerale, come collegata ed interconnessa.
       </Paragraph>
     </BannerBlock>
   </Section>
