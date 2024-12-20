@@ -10,7 +10,11 @@ const currentHref = Astro.url.pathname;
     class="flex w-full max-w-screen-xl flex-col justify-between gap-4 px-10 py-6"
   >
     <div>
-      <a href="/" class="mb-4 flex items-center justify-center space-x-3">
+      <a
+        href="/"
+        aria-label="Luca Del Sole - Torna alla home page"
+        class="mb-4 flex items-center justify-center space-x-3"
+      >
         <LogoSignature className="fill-white w-36" />
       </a>
       <ul

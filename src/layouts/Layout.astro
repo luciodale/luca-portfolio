@@ -1,34 +1,48 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
-
 interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Osteopata a Pescara - Luca Del Sole. Trattamenti osteopatici personalizzati per adulti e bambini. Specializzato in terapia del dolore e riabilitazione.",
+  image = "/images/landing-page/luca-at-desk.jpg",
+  canonicalURL = Astro.url.href,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="it">
   <head>
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/fonts.css" />
-    <link rel="stylesheet" href="/style.css" />
+    <title>{title} | Osteopata Luca Del Sole - Pescara</title>
 
-    <title>{title}</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content={description} />
+    <meta name="author" content="Luca Del Sole" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
   </head>
-  <body class="font-rubik">
-    <Navbar />
+  <body>
     <slot />
-    <Footer />
   </body>
 </html>
