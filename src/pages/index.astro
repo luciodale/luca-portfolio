@@ -1,4 +1,5 @@
 ---
+import { getImage } from "astro:assets";
 import lucaAtDesk from "../assets/images/landing-page/luca-at-desk.jpg";
 import malDiTesta from "../assets/images/landing-page/treatments/mal-di-testa.jpg";
 import muscoloScheletrici from "../assets/images/landing-page/treatments/muscolo-scheletrici.jpg";
@@ -13,12 +14,21 @@ import Section from "../components/Section.astro";
 import Title from "../components/Title.astro";
 import TreatmentGroup from "../components/TreatmentGroup.astro";
 import Layout from "../layouts/Layout.astro";
+
+// Pre-optimize the background image
+const optimizedBackground = await getImage({
+  src: lucaAtDesk,
+  format: "webp",
+  width: 1920,
+  height: 1080,
+  quality: 80,
+});
 ---
 
 <Layout title="Luca Del Sole">
   <div
-    class="relative h-[80vh] bg-[image:var(--bg-image)] bg-no-repeat bg-cover bg-center overflow-hidden flex justify-end flex-col"
-    style={`--bg-image: url(${lucaAtDesk.src})`}
+    class="relative h-[80vh] bg-no-repeat bg-cover bg-center overflow-hidden flex justify-end flex-col"
+    style={`background-image: url(${optimizedBackground.src})`}
   >
     <div
       class="relative mx-auto bottom-20 bg-white max-w-prose p-10 bg-opacity-80"
