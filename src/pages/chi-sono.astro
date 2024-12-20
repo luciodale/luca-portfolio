@@ -1,4 +1,6 @@
 ---
+import withKidSmiling from "../assets/images/about-me/with-kid-smiling.jpg";
+import withPatientArms from "../assets/images/about-me/with-patient-arms.jpg";
 import BannerBlock from "../components/BannerBlock.astro";
 import CTA from "../components/CTA.astro";
 import Paragraph from "../components/Paragraph.astro";
@@ -7,11 +9,16 @@ import Section from "../components/Section.astro";
 import TextImage from "../components/TextImage.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
+
+console.log("Image paths:", {
+  withKidSmiling,
+  withPatientArms,
+});
 ---
 
 <Layout title="Chi Sono">
   <Section>
-    <TextImage imageSrc="/chi-sono2.jpg">
+    <TextImage imageSrc={withKidSmiling}>
       <div>
         <Title> Percorso di studio </Title>
         <Paragraph>
@@ -29,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
   </Section>
 
   <Section bg="bg-gray-50">
-    <TextImage reverse imageSrc="/chi-sono3.jpg">
+    <TextImage reverse imageSrc={withPatientArms}>
       <div>
         <Title> Tirocini pratici </Title>
         <ParagraphBlock>

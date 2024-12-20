@@ -1,4 +1,5 @@
 ---
+import lucaAtEntrance from "../assets/images/contacts/luca-at-entrance.jpg";
 import Paragraph from "../components/Paragraph.astro";
 import Section from "../components/Section.astro";
 import Title from "../components/Title.astro";
@@ -7,7 +8,8 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Luca Del Sole">
   <div
-    class="bg-[url('/contatti.jpg')] bg-center bg-no-repeat bg-cover h-[70vh]"
+    class="bg-[image:var(--bg-image)] bg-center bg-no-repeat bg-cover h-[70vh]"
+    style={`--bg-image: url(${lucaAtEntrance.src})`}
   >
   </div>
   <Section>

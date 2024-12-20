@@ -1,4 +1,6 @@
 ---
+import kidOnBedImage from "../assets/images/treatments/kid-on-bed.jpg";
+import kidOnWallImage from "../assets/images/treatments/kid-on-wall.jpg";
 import BannerBlock from "../components/BannerBlock.astro";
 import CTA from "../components/CTA.astro";
 import Paragraph from "../components/Paragraph.astro";
@@ -13,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Trattamenti">
   <Section>
-    <TextImage imageSrc="/trattamenti1.jpg">
+    <TextImage imageSrc={kidOnWallImage}>
       <div>
         <Title> Come funziona il trattamento </Title>
         <ParagraphBlock>
@@ -161,7 +163,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </Section>
   <Section>
-    <TextImage reverse imageSrc="/trattamenti2.jpg">
+    <TextImage reverse imageSrc={kidOnBedImage}>
       <div>
         <Title> Quando rivolgersi all'osteopata </Title>
         <ParagraphBlock>
