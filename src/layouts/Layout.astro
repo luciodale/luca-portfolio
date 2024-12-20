@@ -1,4 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+
 interface Props {
   title: string;
   description?: string;
@@ -42,7 +45,9 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
   </head>
-  <body>
+  <body class="font-rubik">
+    <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
